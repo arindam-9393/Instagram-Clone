@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post</title>
+  <style>
+    /* 🔹 Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* 🔹 Body */
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 🔹 Header */
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    /* 🔹 Form container */
+    .form-container {
+      width: 90%;
+      max-width: 600px;
+      background-color: white;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+
+    .form-container h2 {
+      color: #0078d7;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 15px;
+      text-align: center;
+      color: #0078d7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 🔹 Footer */
+    footer {
+      text-align: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📝 Create a New Post</h1>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2>Share your thoughts</h2>
+      <form action="/createpost" method="POST">
+        <label for="content">Post Content:</label>
+        <textarea name="content" id="content" placeholder="What's on your mind?" required></textarea>
+        
+        <button type="submit">Publish Post</button>
+      </form>
+
+      <a href="/home" class="back-link">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 YourApp | Built with ❤️ by Arindam</p>
+  </footer>
+</body>
+</html>
