@@ -260,6 +260,9 @@ app.get('/home' , async(req , res)=>{
 app.get('/login' , (req , res)=>{
   res.render('login');
 });
+app.get('/:asd' , (req , res)=>{
+  res.send("not found");
+});
 
 app.post('/createpost' , isLoggedIn, async (req , res)=>{
   let {content}=req.body;
